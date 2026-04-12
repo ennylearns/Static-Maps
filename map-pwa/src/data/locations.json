@@ -1,0 +1,108 @@
+{
+  "main_gate": {
+    "id": "main_gate",
+    "name": "Main Gate",
+    "coords": [7.5181, 4.5223],
+    "description": "Campus main entrance",
+    "PLACEHOLDER": true
+  },
+  "library": {
+    "id": "library",
+    "name": "University Library",
+    "coords": [7.5210, 4.5255],
+    "description": "Main university library and reading rooms",
+    "keywords": ["library", "books", "reading", "reading room"],
+    "icon": "📚",
+    "PLACEHOLDER": true
+  },
+  "admin_block": {
+    "id": "admin_block",
+    "name": "Administration Block",
+    "coords": [7.5198, 4.5240],
+    "description": "Central administrative offices, bursary, and registry",
+    "keywords": ["admin", "administration", "office", "bursary", "registry", "vc", "vice chancellor"],
+    "icon": "🏛️",
+    "PLACEHOLDER": true
+  },
+  "cafeteria": {
+    "id": "cafeteria",
+    "name": "Student Cafeteria",
+    "coords": [7.5190, 4.5250],
+    "description": "Main student dining hall and cafeteria",
+    "keywords": ["cafeteria", "canteen", "food", "dining", "eat", "restaurant"],
+    "icon": "🍽️",
+    "PLACEHOLDER": true
+  },
+  "lecture_hall": {
+    "id": "lecture_hall",
+    "name": "Main Lecture Hall",
+    "coords": [7.5200, 4.5235],
+    "description": "Primary lecture complex and auditorium",
+    "keywords": ["lecture", "class", "hall", "auditorium", "theatre"],
+    "icon": "🎓",
+    "PLACEHOLDER": true
+  },
+  "hostel_a": {
+    "id": "hostel_a",
+    "name": "Hostel A (Male)",
+    "coords": [7.5175, 4.5260],
+    "description": "Male student residential hostel",
+    "keywords": ["hostel a", "male hostel", "hostel", "dormitory", "boys hostel"],
+    "icon": "🏠",
+    "PLACEHOLDER": true
+  },
+  "hostel_b": {
+    "id": "hostel_b",
+    "name": "Hostel B (Female)",
+    "coords": [7.5168, 4.5248],
+    "description": "Female student residential hostel",
+    "keywords": ["hostel b", "female hostel", "girls hostel", "ladies hostel"],
+    "icon": "🏠",
+    "PLACEHOLDER": true
+  },
+  "engineering_lab": {
+    "id": "engineering_lab",
+    "name": "Engineering Laboratory",
+    "coords": [7.5215, 4.5225],
+    "description": "Faculty of Engineering laboratories and workshops",
+    "keywords": ["engineering", "lab", "laboratory", "workshop", "computer lab"],
+    "icon": "⚙️",
+    "PLACEHOLDER": true
+  },
+  "medical_center": {
+    "id": "medical_center",
+    "name": "Medical Centre / Clinic",
+    "coords": [7.5185, 4.5270],
+    "description": "Campus health centre and medical facility",
+    "keywords": ["medical", "clinic", "hospital", "health", "sick bay", "doctor", "nurse"],
+    "icon": "🏥",
+    "PLACEHOLDER": true
+  },
+  "sports_complex": {
+    "id": "sports_complex",
+    "name": "Sports Complex",
+    "coords": [7.5170, 4.5235],
+    "description": "Stadium, courts, and sports facilities",
+    "keywords": ["sports", "stadium", "field", "court", "gym", "football", "basketball"],
+    "icon": "🏟️",
+    "PLACEHOLDER": true
+  },
+  "chapel": {
+    "id": "chapel",
+    "name": "Chapel / Place of Worship",
+    "coords": [7.5205, 4.5215],
+    "description": "University chapel and worship centre",
+    "keywords": ["chapel", "church", "worship", "mosque", "prayer", "religion"],
+    "icon": "⛪",
+    "PLACEHOLDER": true
+  },
+  "student_union": {
+    "id": "student_union",
+    "name": "Student Union Building",
+    "coords": [7.5192, 4.5262],
+    "description": "Student union, secretariat, and student activities centre",
+    "keywords": ["student union", "sub", "secretariat", "student government"],
+    "icon": "🏢",
+    "PLACEHOLDER": true
+  }
+}
