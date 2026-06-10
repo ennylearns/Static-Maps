@@ -1,60 +1,91 @@
 import { useRef, Suspense, lazy, useEffect, useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, useNavigate } from 'react-router-dom';
 import locations from './data/locations.json';
 import OfflineBanner from './components/OfflineBanner';
 import NavigationPanel from './components/NavigationPanel';
 import LocationSelector from './components/LocationSelector';
 
-// Lazy-load the heavy Leaflet map to speed up initial render
 const MapView = lazy(() => import('./components/MapView'));
+
+/* ── Bottom Nav Bar ── */
+function BottomNav({ activeTab, onTabChange }) {
+  const tabs = [
+    { id: 'map',      icon: '🗺️',  label: 'MAP'      },
+    { id: 'missions', icon: '📋',  label: 'MISSIONS' },
+    { id: 'intel',    icon: '📡',  label: 'INTEL'    },
+    { id: 'profile',  icon: '👤',  label: 'PROFILE'  },
+  ];
+
+  return (
+    <nav className="bottom-nav" role="navigation" aria-label="Main navigation">
+      {tabs.map((tab) => (
+        <button
+          key={tab.id}
+          id={`nav-${tab.id}`}
+          className={`nav-item ${activeTab === tab.id ? 'active' : ''}`}
+          onClick={() => onTabChange(tab.id)}
+          aria-label={tab.label}
+          aria-current={activeTab === tab.id ? 'page' : undefined}
+        >
+          <span className="nav-icon" aria-hidden="true">{tab.icon}</span>
+          <span className="nav-label">{tab.label}</span>
+        </button>
+      ))}
+    </nav>
+  );
+}
 
 export default function App() {
   const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
   const [ready, setReady] = useState(false);
+  const [activeTab, setActiveTab] = useState('map');
   const recenterRef = useRef(null);
 
   const destinationId = searchParams.get('to');
   const destination = destinationId ? locations[destinationId] : null;
   const origin = locations['main_gate'];
 
-  // Small delay so CSS animations play on first frame
   useEffect(() => {
-    const t = setTimeout(() => setReady(true), 100);
+    const t = setTimeout(() => setReady(true), 80);
     return () => clearTimeout(t);
   }, []);
 
-  const handleRecenter = () => {
-    if (recenterRef.current) recenterRef.current();
+  const handleRecenter = () => recenterRef.current?.();
+
+  const handleTabChange = (tab) => {
+    setActiveTab(tab);
+    if (tab === 'map') return; // stay on map
+    // Future: navigate to other sections
   };
 
-  // ── No destination selected → show picker ──
+  /* ── No destination → Destination Selector ── */
   if (!destinationId) {
     return (
       <>
         <OfflineBanner />
         <LocationSelector />
+        <BottomNav activeTab={activeTab} onTabChange={handleTabChange} />
       </>
     );
   }
 
-  // ── Unknown destination ID ──
+  /* ── Unknown destination ── */
   if (!destination) {
     return (
       <div className="error-screen" role="alert" id="error-screen">
-        <span className="error-icon">🗺️</span>
-        <h2>Destination Not Found</h2>
-        <p>
-          The location <strong>"{destinationId}"</strong> doesn't exist in the campus directory.
-        </p>
+        <span className="error-icon">🎯</span>
+        <h2>Target Not Found</h2>
+        <p>The location <strong>"{destinationId}"</strong> is not in the AFIT campus directory.</p>
         <div className="hint">
-          Try scanning the QR code again at the kiosk, or select a destination manually.
+          Scan the QR code again at the kiosk, or select a destination manually.
         </div>
         <button
           id="btn-go-home"
           className="btn-primary"
-          onClick={() => window.location.replace('/')}
+          onClick={() => navigate('/')}
         >
-          🏠 Choose Destination
+          ← Choose Destination
         </button>
       </div>
     );
@@ -62,35 +93,31 @@ export default function App() {
 
   const isPlaceholder = destination.PLACEHOLDER || origin.PLACEHOLDER;
 
-  // ── Full Map View ──
+  /* ── Full Map Navigation View ── */
   return (
     <div className="app-shell" id="map-app">
       <OfflineBanner />
 
-      {/* Top Header */}
+      {/* Floating Header */}
       <header className="map-header" role="banner" aria-label="App header">
         <div className="map-branding">
-          <span className="brand-icon" aria-hidden="true">🗺️</span>
-          <span className="brand-name">Campus<span>Guide</span></span>
+          <span className="brand-icon" aria-hidden="true">✈️</span>
+          <span className="brand-name">AFIT Tactical Guide</span>
         </div>
-        <div
-          className="map-badge"
-          aria-label="Navigation active"
-          role="status"
-        >
+        <div className="map-badge" role="status" aria-label="Navigation active">
           <span className="dot" aria-hidden="true" />
           Navigating
         </div>
       </header>
 
-      {/* Map + Route */}
+      {/* Map */}
       <div className="map-container" id="map-container">
         {ready && (
           <Suspense
             fallback={
               <div className="loading-screen">
-                <div className="loading-spinner" role="status" aria-label="Loading map" />
-                <p>Loading map…</p>
+                <div className="loading-spinner" role="status" aria-label="Loading tactical map" />
+                <p>Loading tactical map…</p>
               </div>
             }
           >
@@ -109,12 +136,12 @@ export default function App() {
         className="map-fab"
         onClick={handleRecenter}
         aria-label="Recenter map to show full route"
-        title="Recenter map"
+        title="Recenter"
       >
         ⊕
       </button>
 
-      {/* Bottom Navigation Panel */}
+      {/* Navigation Panel */}
       <NavigationPanel
         destination={destination}
         origin={origin}

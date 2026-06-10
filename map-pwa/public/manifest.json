@@ -1,11 +1,11 @@
 {
-  "name": "CampusGuide — Campus Navigation",
-  "short_name": "CampusGuide",
-  "description": "Smart campus navigation map. Scan the kiosk QR code for instant walking directions.",
+  "name": "AFIT Tactical Guide — Campus Navigation",
+  "short_name": "AFIT Guide",
+  "description": "Campus navigation for Air Force Institute of Technology, Kaduna. Scan the kiosk QR code for instant directions.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0a0f1e",
-  "theme_color": "#0a0f1e",
+  "background_color": "#081325",
+  "theme_color": "#081325",
   "orientation": "portrait-primary",
   "icons": [
     {
@@ -21,6 +21,5 @@
       "purpose": "any maskable"
     }
   ],
-  "categories": ["navigation", "education"],
-  "screenshots": []
+  "categories": ["navigation", "education", "military"]
 }
