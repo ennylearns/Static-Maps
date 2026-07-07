@@ -1,108 +1,453 @@
 {
-  "main_gate": {
-    "id": "main_gate",
-    "name": "Main Gate",
-    "coords": [7.5181, 4.5223],
-    "description": "Campus main entrance",
-    "PLACEHOLDER": true
-  },
-  "library": {
-    "id": "library",
-    "name": "University Library",
-    "coords": [7.5210, 4.5255],
-    "description": "Main university library and reading rooms",
-    "keywords": ["library", "books", "reading", "reading room"],
-    "icon": "📚",
-    "PLACEHOLDER": true
-  },
-  "admin_block": {
-    "id": "admin_block",
-    "name": "Administration Block",
-    "coords": [7.5198, 4.5240],
-    "description": "Central administrative offices, bursary, and registry",
-    "keywords": ["admin", "administration", "office", "bursary", "registry", "vc", "vice chancellor"],
-    "icon": "🏛️",
-    "PLACEHOLDER": true
-  },
-  "cafeteria": {
-    "id": "cafeteria",
-    "name": "Student Cafeteria",
-    "coords": [7.5190, 4.5250],
-    "description": "Main student dining hall and cafeteria",
-    "keywords": ["cafeteria", "canteen", "food", "dining", "eat", "restaurant"],
-    "icon": "🍽️",
-    "PLACEHOLDER": true
-  },
-  "lecture_hall": {
-    "id": "lecture_hall",
-    "name": "Main Lecture Hall",
-    "coords": [7.5200, 4.5235],
-    "description": "Primary lecture complex and auditorium",
-    "keywords": ["lecture", "class", "hall", "auditorium", "theatre"],
-    "icon": "🎓",
-    "PLACEHOLDER": true
-  },
-  "hostel_a": {
-    "id": "hostel_a",
-    "name": "Hostel A (Male)",
-    "coords": [7.5175, 4.5260],
-    "description": "Male student residential hostel",
-    "keywords": ["hostel a", "male hostel", "hostel", "dormitory", "boys hostel"],
-    "icon": "🏠",
-    "PLACEHOLDER": true
-  },
-  "hostel_b": {
-    "id": "hostel_b",
-    "name": "Hostel B (Female)",
-    "coords": [7.5168, 4.5248],
-    "description": "Female student residential hostel",
-    "keywords": ["hostel b", "female hostel", "girls hostel", "ladies hostel"],
-    "icon": "🏠",
-    "PLACEHOLDER": true
-  },
-  "engineering_lab": {
-    "id": "engineering_lab",
-    "name": "Engineering Laboratory",
-    "coords": [7.5215, 4.5225],
-    "description": "Faculty of Engineering laboratories and workshops",
-    "keywords": ["engineering", "lab", "laboratory", "workshop", "computer lab"],
-    "icon": "⚙️",
-    "PLACEHOLDER": true
-  },
-  "medical_center": {
-    "id": "medical_center",
-    "name": "Medical Centre / Clinic",
-    "coords": [7.5185, 4.5270],
-    "description": "Campus health centre and medical facility",
-    "keywords": ["medical", "clinic", "hospital", "health", "sick bay", "doctor", "nurse"],
-    "icon": "🏥",
-    "PLACEHOLDER": true
+  "bk_girls_hostel": {
+    "id": "bk_girls_hostel",
+    "name": "bk girls hostel",
+    "coords": [
+      10.612701667,
+      7.45186
+    ],
+    "description": "bk girls hostel",
+    "keywords": [
+      "bk girls hostel",
+      "bk",
+      "girls",
+      "hostel"
+    ],
+    "icon": "📍",
+    "PLACEHOLDER": false
   },
   "sports_complex": {
     "id": "sports_complex",
-    "name": "Sports Complex",
-    "coords": [7.5170, 4.5235],
-    "description": "Stadium, courts, and sports facilities",
-    "keywords": ["sports", "stadium", "field", "court", "gym", "football", "basketball"],
+    "name": "AFIT Stadium",
+    "coords": [
+      10.613156667,
+      7.450541667
+    ],
+    "description": "AFIT Stadium location",
+    "keywords": [
+      "afit stadium",
+      "afit",
+      "stadium"
+    ],
     "icon": "🏟️",
-    "PLACEHOLDER": true
+    "PLACEHOLDER": false
   },
-  "chapel": {
-    "id": "chapel",
-    "name": "Chapel / Place of Worship",
-    "coords": [7.5205, 4.5215],
-    "description": "University chapel and worship centre",
-    "keywords": ["chapel", "church", "worship", "mosque", "prayer", "religion"],
-    "icon": "⛪",
-    "PLACEHOLDER": true
+  "old_girls_hostel": {
+    "id": "old_girls_hostel",
+    "name": "old girls hostel",
+    "coords": [
+      10.613306667,
+      7.44703
+    ],
+    "description": "old girls hostel location",
+    "keywords": [
+      "old girls hostel",
+      "old",
+      "girls",
+      "hostel"
+    ],
+    "icon": "📍",
+    "PLACEHOLDER": false
   },
-  "student_union": {
-    "id": "student_union",
-    "name": "Student Union Building",
-    "coords": [7.5192, 4.5262],
-    "description": "Student union, secretariat, and student activities centre",
-    "keywords": ["student union", "sub", "secretariat", "student government"],
-    "icon": "🏢",
-    "PLACEHOLDER": true
+  "medical_center": {
+    "id": "medical_center",
+    "name": "AFIT Clinic",
+    "coords": [
+      10.612703333,
+      7.446498333
+    ],
+    "description": "AFIT Clinic location",
+    "keywords": [
+      "afit clinic",
+      "afit",
+      "clinic"
+    ],
+    "icon": "🏥",
+    "PLACEHOLDER": false
+  },
+  "afit_laboratory": {
+    "id": "afit_laboratory",
+    "name": "AFIT Laboratory",
+    "coords": [
+      10.612015,
+      7.446003333
+    ],
+    "description": "AFIT Laboratory location",
+    "keywords": [
+      "afit laboratory",
+      "afit",
+      "laboratory"
+    ],
+    "icon": "📍",
+    "PLACEHOLDER": false
+  },
+  "bush_cateen": {
+    "id": "bush_cateen",
+    "name": "Bush Cateen",
+    "coords": [
+      10.61057,
+      7.444506667
+    ],
+    "description": "Bush Cateen location",
+    "keywords": [
+      "bush cateen",
+      "bush",
+      "cateen"
+    ],
+    "icon": "🍽️",
+    "PLACEHOLDER": false
+  },
+  "civil_engineering_department": {
+    "id": "civil_engineering_department",
+    "name": "Civil Engineering Department",
+    "coords": [
+      10.60985,
+      7.443325
+    ],
+    "description": "Civil Engineering Department location",
+    "keywords": [
+      "civil engineering department",
+      "civil",
+      "engineering",
+      "department"
+    ],
+    "icon": "📍",
+    "PLACEHOLDER": false
+  },
+  "love_garden": {
+    "id": "love_garden",
+    "name": "Love Garden",
+    "coords": [
+      10.609785,
+      7.44279
+    ],
+    "description": "Love Garden location",
+    "keywords": [
+      "love garden",
+      "love",
+      "garden"
+    ],
+    "icon": "🌳",
+    "PLACEHOLDER": false
+  },
+  "hangar": {
+    "id": "hangar",
+    "name": "Hangar",
+    "coords": [
+      10.609201667,
+      7.442641667
+    ],
+    "description": "Hangar location",
+    "keywords": [
+      "hangar",
+      "hangar"
+    ],
+    "icon": "📍",
+    "PLACEHOLDER": false
+  },
+  "yisa_doko_hall": {
+    "id": "yisa_doko_hall",
+    "name": "Yisa Doko Hall",
+    "coords": [
+      10.608495,
+      7.442001667
+    ],
+    "description": "Yisa Doko Hall location",
+    "keywords": [
+      "yisa doko hall",
+      "yisa",
+      "doko",
+      "hall"
+    ],
+    "icon": "📍",
+    "PLACEHOLDER": false
+  },
+  "head_quarters": {
+    "id": "head_quarters",
+    "name": "Head Quarters",
+    "coords": [
+      10.608265,
+      7.441823333
+    ],
+    "description": "Head Quarters location",
+    "keywords": [
+      "head quarters",
+      "head",
+      "quarters"
+    ],
+    "icon": "🏛️",
+    "PLACEHOLDER": false
+  },
+  "gsu": {
+    "id": "gsu",
+    "name": "GSU",
+    "coords": [
+      10.609306667,
+      7.441866667
+    ],
+    "description": "GSU location",
+    "keywords": [
+      "gsu",
+      "gsu"
+    ],
+    "icon": "📍",
+    "PLACEHOLDER": false
+  },
+  "library": {
+    "id": "library",
+    "name": "AFIT Library",
+    "coords": [
+      10.609708333,
+      7.441911667
+    ],
+    "description": "AFIT Library location",
+    "keywords": [
+      "afit library",
+      "afit",
+      "library"
+    ],
+    "icon": "📚",
+    "PLACEHOLDER": false
+  },
+  "200_lvl_lr": {
+    "id": "200_lvl_lr",
+    "name": "200 LVL LR",
+    "coords": [
+      10.60934,
+      7.441291667
+    ],
+    "description": "200 LVL LR location",
+    "keywords": [
+      "200 lvl lr",
+      "200",
+      "lvl",
+      "lr"
+    ],
+    "icon": "📍",
+    "PLACEHOLDER": false
+  },
+  "ibrahim_alfa_hall": {
+    "id": "ibrahim_alfa_hall",
+    "name": "IBRAHIM ALFA HALL",
+    "coords": [
+      10.6091,
+      7.443576667
+    ],
+    "description": "IBRAHIM ALFA HALL location",
+    "keywords": [
+      "ibrahim alfa hall",
+      "ibrahim",
+      "alfa",
+      "hall"
+    ],
+    "icon": "📍",
+    "PLACEHOLDER": false
+  },
+  "tetfund_girls_hostel": {
+    "id": "tetfund_girls_hostel",
+    "name": "TETFUND Girls Hostel",
+    "coords": [
+      10.608468333,
+      7.444836667
+    ],
+    "description": "TETFUND Girls Hostel location",
+    "keywords": [
+      "tetfund girls hostel",
+      "tetfund",
+      "girls",
+      "hostel"
+    ],
+    "icon": "📍",
+    "PLACEHOLDER": false
+  },
+  "faculty_of_science": {
+    "id": "faculty_of_science",
+    "name": "Faculty of Science",
+    "coords": [
+      10.609171667,
+      7.444746667
+    ],
+    "description": "Faculty of Science location",
+    "keywords": [
+      "faculty of science",
+      "faculty",
+      "of",
+      "science"
+    ],
+    "icon": "📍",
+    "PLACEHOLDER": false
+  },
+  "faculty_of_social_science": {
+    "id": "faculty_of_social_science",
+    "name": "Faculty of Social Science",
+    "coords": [
+      10.60945,
+      7.445218333
+    ],
+    "description": "Faculty of Social Science location",
+    "keywords": [
+      "faculty of social science",
+      "faculty",
+      "of",
+      "social",
+      "science"
+    ],
+    "icon": "📍",
+    "PLACEHOLDER": false
+  },
+  "faculty_of_computing": {
+    "id": "faculty_of_computing",
+    "name": "Faculty of Computing",
+    "coords": [
+      10.610311667,
+      7.446113333
+    ],
+    "description": "Faculty of Computing location",
+    "keywords": [
+      "faculty of computing",
+      "faculty",
+      "of",
+      "computing"
+    ],
+    "icon": "📍",
+    "PLACEHOLDER": false
+  },
+  "afit_sports_complex": {
+    "id": "afit_sports_complex",
+    "name": "AFIT Sports Complex",
+    "coords": [
+      10.611195,
+      7.44785
+    ],
+    "description": "AFIT Sports Complex location",
+    "keywords": [
+      "afit sports complex",
+      "afit",
+      "sports",
+      "complex"
+    ],
+    "icon": "📍",
+    "PLACEHOLDER": false
+  },
+  "mechatronics_classes": {
+    "id": "mechatronics_classes",
+    "name": "Mechatronics Classes",
+    "coords": [
+      10.612046667,
+      7.441906667
+    ],
+    "description": "Mechatronics Classes location",
+    "keywords": [
+      "mechatronics classes",
+      "mechatronics",
+      "classes"
+    ],
+    "icon": "📍",
+    "PLACEHOLDER": false
+  },
+  "faculty_of_air_engineering": {
+    "id": "faculty_of_air_engineering",
+    "name": "Faculty of Air Engineering",
+    "coords": [
+      10.611781667,
+      7.441031667
+    ],
+    "description": "Faculty of Air Engineering location",
+    "keywords": [
+      "faculty of air engineering",
+      "faculty",
+      "of",
+      "air",
+      "engineering"
+    ],
+    "icon": "📍",
+    "PLACEHOLDER": false
+  },
+  "100_level_lr": {
+    "id": "100_level_lr",
+    "name": "100 LEVEL LR",
+    "coords": [
+      10.611555,
+      7.440078333
+    ],
+    "description": "100 LEVEL LR location",
+    "keywords": [
+      "100 level lr",
+      "100",
+      "level",
+      "lr"
+    ],
+    "icon": "📍",
+    "PLACEHOLDER": false
+  },
+  "faculty_of_ground_engineeringeeed": {
+    "id": "faculty_of_ground_engineeringeeed",
+    "name": "Faculty of Ground Engineering/EEED",
+    "coords": [
+      10.610545,
+      7.440545
+    ],
+    "description": "Faculty of Ground Engineering/EEED location",
+    "keywords": [
+      "faculty of ground engineering/eeed",
+      "faculty",
+      "of",
+      "ground",
+      "engineering/eeed"
+    ],
+    "icon": "📍",
+    "PLACEHOLDER": false
+  },
+  "school_of_post_graduate_studies": {
+    "id": "school_of_post_graduate_studies",
+    "name": "School of Post Graduate Studies",
+    "coords": [
+      10.610465,
+      7.439733333
+    ],
+    "description": "School of Post Graduate Studies location",
+    "keywords": [
+      "school of post graduate studies",
+      "school",
+      "of",
+      "post",
+      "graduate",
+      "studies"
+    ],
+    "icon": "📍",
+    "PLACEHOLDER": false
+  },
+  "oladayo_amao_hall": {
+    "id": "oladayo_amao_hall",
+    "name": "Oladayo Amao Hall",
+    "coords": [
+      10.609996667,
+      7.44019
+    ],
+    "description": "Oladayo Amao Hall location",
+    "keywords": [
+      "oladayo amao hall",
+      "oladayo",
+      "amao",
+      "hall"
+    ],
+    "icon": "📍",
+    "PLACEHOLDER": false
+  },
+  "main_gate": {
+    "id": "main_gate",
+    "name": "AFIT Gate",
+    "coords": [
+      10.608128333,
+      7.439121667
+    ],
+    "description": "AFIT Gate location",
+    "keywords": [
+      "afit gate",
+      "afit",
+      "gate"
+    ],
+    "icon": "🚪",
+    "PLACEHOLDER": false
   }
 }
