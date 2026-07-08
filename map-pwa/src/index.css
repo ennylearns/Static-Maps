@@ -931,3 +931,32 @@ button:focus-visible, a:focus-visible {
   outline-offset: 3px;
   border-radius: var(--radius-sm);
 }
+
+/* ── Leaflet Routing Container Overrides ── */
+.leaflet-routing-container {
+  background: var(--surface-highest) !important;
+  background-color: var(--surface-highest) !important;
+  opacity: 1 !important;
+  color: var(--text) !important;
+  border: 1px solid var(--outline) !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: var(--shadow-ambient) !important;
+}
+
+.leaflet-routing-container,
+.leaflet-routing-container * {
+  color: var(--text) !important;
+}
+
+.leaflet-routing-alt {
+  background: var(--surface-high) !important;
+  border-bottom: 1px solid var(--outline) !important;
+}
+
+.leaflet-routing-alt tr:hover {
+  background: var(--surface-bright) !important;
+}
+
+.leaflet-routing-container table {
+  background: transparent !important;
+}

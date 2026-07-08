@@ -1,18 +1,8 @@
 import { useEffect, useRef, useCallback } from 'react';
-import { MapContainer, TileLayer, Marker, Polyline, useMap } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import { createCustomIcon } from '../utils/mapUtils';
-
-// ── Auto-fit map bounds to show both markers ──────────────────────────
-function FitBounds({ coords }) {
-  const map = useMap();
-  useEffect(() => {
-    if (coords && coords.length === 2) {
-      map.fitBounds(coords, { padding: [80, 80], maxZoom: 18 });
-    }
-  }, [coords, map]);
-  return null;
-}
+import RoutingControl from './RoutingControl';
 
 // ── Expose recenter function via ref ──────────────────────────────────
 function RecenterControl({ coords, controlRef }) {
@@ -63,19 +53,8 @@ export default function MapView({ origin, destination, recenterRef }) {
         keepBuffer={4}
       />
 
-      {/* Animated dashed route line */}
-      <Polyline
-        positions={routeCoords}
-        pathOptions={{
-          color: '#4f8ef7',
-          weight: 4,
-          dashArray: '12 8',
-          dashOffset: '0',
-          lineCap: 'round',
-          opacity: 0.9,
-        }}
-        className="route-line"
-      />
+      {/* Routing Control for Actual Roads */}
+      <RoutingControl origin={origin.coords} destination={destination.coords} />
 
       {/* Origin Marker — Main Gate */}
       <Marker position={origin.coords} icon={originIcon} alt={origin.name}>
@@ -84,9 +63,6 @@ export default function MapView({ origin, destination, recenterRef }) {
       {/* Destination Marker */}
       <Marker position={destination.coords} icon={destIcon} alt={destination.name}>
       </Marker>
-
-      {/* Fit map to show both points */}
-      <FitBounds coords={routeCoords} />
 
       {/* Expose recenter via ref */}
       <RecenterControl coords={routeCoords} controlRef={recenterRef} />

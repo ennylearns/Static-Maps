@@ -98,17 +98,7 @@ export default function App() {
     <div className="app-shell" id="map-app">
       <OfflineBanner />
 
-      {/* Floating Header */}
-      <header className="map-header" role="banner" aria-label="App header">
-        <div className="map-branding">
-          <span className="brand-icon" aria-hidden="true">✈️</span>
-          <span className="brand-name">AFIT Tactical Guide</span>
-        </div>
-        <div className="map-badge" role="status" aria-label="Navigation active">
-          <span className="dot" aria-hidden="true" />
-          Navigating
-        </div>
-      </header>
+
 
       {/* Map */}
       <div className="map-container" id="map-container">
