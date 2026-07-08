@@ -30,8 +30,7 @@ export default function LocationSelector() {
           </div>
         </div>
 
-        <h1>Where do you<br />want to go?</h1>
-        <p>Select your destination — directions from the Main Gate</p>
+
 
         {/* Search Bar */}
         <div className="search-bar" id="destination-search">
