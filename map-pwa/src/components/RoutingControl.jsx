@@ -29,7 +29,7 @@ export default function RoutingControl({ origin, destination }) {
       show: false, // Don't show the itinerary control
       createMarker: () => null, // Hide default routing markers
       lineOptions: {
-        styles: [{ color: '#4f8ef7', weight: 4, dashArray: '12 8', opacity: 0.9, className: 'route-line' }]
+        styles: [{ color: '#4f8ef7', weight: 4, opacity: 0.9, className: 'route-line' }]
       }
     }).addTo(map);
 
